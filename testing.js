@@ -77,18 +77,37 @@
 // console.log(timeConversion(test4))
 // console.log(timeConversion(test5))
 
-function fizzBuzz(n) {
-    // Write your code here
-    for (let i = 1; i <= n; i++) {
+// function fizzBuzz(n) {
+//     // Write your code here
+//     for (let i = 1; i <= n; i++) {
 
-        if (n % 3 === 0 && n % 5 === 0) {
-            console.log('FizzBuzz')
-        } else if (n % 3 === 0) {
-            console.log('Fizz')
-        } else if (n % 3 === 0) {
-            console.log('Buzz')
-        } else {
-            console.log(i)
-        }
-    }
-}
+//         if (n % 3 === 0 && n % 5 === 0) {
+//             console.log('FizzBuzz')
+//         } else if (n % 3 === 0) {
+//             console.log('Fizz')
+//         } else if (n % 3 === 0) {
+//             console.log('Buzz')
+//         } else {
+//             console.log(i)
+//         }
+//     }
+// }
+
+// let test = [[11, 2, 4],
+// [4, 5, 6],
+// [10, 8, -12]]
+
+// function diagonalDifference(arr) {
+//     // Write your code here
+//     let length = arr.length
+//     let sum1 = 0
+//     let sum2 = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         sum1 += arr[i][i]
+//         sum2 += arr[i][length - 1 - i]
+//     }
+//     return (Math.abs(sum1 - sum2))
+// }
+
+// console.log(diagonalDifference(test))
+
