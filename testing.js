@@ -111,3 +111,72 @@
 
 // console.log(diagonalDifference(test))
 
+// let test = [63, 25, 73, 1, 98, 98, 98, 98, 97, 97, 101, 101, 0, 0]
+// let test2 = [63, 54, 17, 78, 43, 70, 32, 97, 16, 94, 74, 18, 60, 61, 35, 83, 13, 56, 75, 52, 70, 12, 24, 37, 17, 0, 16, 64, 34, 81, 82, 24, 69, 2, 30, 61, 83, 37, 97, 16, 70, 53, 0, 61, 12, 17, 97, 67, 33, 30, 49, 70, 11, 40, 67, 94, 84, 60, 35, 58, 19, 81, 16, 14, 68, 46, 42, 81, 75, 87, 13, 84, 33, 34, 14, 96, 7, 59, 17, 98, 79, 47, 71, 75, 8, 27, 73, 66, 64, 12, 29, 35, 80, 78, 80, 6, 5, 24, 49, 82]
+
+
+// function countingSort(arr) {
+//     // Write your code here
+//     let result = []
+//     for (let i = 0; i < 100; i++) {
+//         result.push(0)
+//     }
+//     for (let i = 0; i < arr.length; i++) {
+//         result[arr[i]]++;
+//     }
+
+//     return result;
+// }
+
+// console.log(countingSort(test2))
+
+// test1 = [
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [1, 2, 3, 4, 5, 6],
+//     [4, 2, 3, 4, 5, 6],
+//     [5, 2, 3, 4, 5, 6],
+//     [6, 2, 3, 4, 5, 6]
+// ]
+
+
+// function flippingMatrix(matrix) {
+//     // Write your code here
+//     let sum = 0;
+//     let quadrantSize = matrix.length / 2
+//     let mutableMatrix = matrix
+
+//     function flipColumn(column) {
+//         columnArray = []
+//         for (let i = matrix.length; i >= 0; i--) {
+//             columnArray.push(matrix[i][column])
+//         }
+
+//     }
+
+//     matrix[0] = matrix[0].reverse()
+//     // we need to find the sum of the upper left quadrant (by finding the size of the quadrant first)
+//     // we need to then figure out how to reverse rows - use JS method reverse()
+//     // figure out how to reverse columns
+//     return sum
+
+// }
+
+// console.log(flippingMatrix(test1))
+
+let test1 = [1, 2, 3, 4, 5, 10, 11, 15, 34]
+
+function processData(input) {
+    //Enter your code here
+    let ascendingArr = input.sort(function (a, b) { return a - b }) // first make array ascending
+    let result = []
+    for (let i = 0; i < input.length; i += 2) {
+        result.push(ascendingArr[i])
+    }
+    for (let i = input.length - 2; i >= 1; i -= 2) {
+        result.push(ascendingArr[i])
+    }
+    console.log(result)
+}
+
+processData(test1)
