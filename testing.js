@@ -204,3 +204,36 @@
 // }
 // console.log(superDigit(testString, iterations))
 
+// test = [1, 7, 3, 6, 5, 6, 8]
+// const pivotIndex = function (nums) {
+
+//     // calculate sum left of index i
+//     // calculate sum right of index i
+//     // compare - if equal, return i
+
+//     function leftSum(index, array) {
+//         let sum = 0
+//         for (let i = 0; i < index; i++) {
+//             sum += array[i]
+//         }
+//         return sum
+//     }
+//     function rightSum(index, array) {
+//         let sum = 0
+//         for (let i = index + 1; i < array.length; i++) {
+//             sum += array[i]
+//         }
+//         return sum
+//     }
+//     for (let i = 0; i < nums.length; i++) {
+//         // console.log("left sum =" + leftSum(i, nums))
+//         // console.log("right sum =" + rightSum(i, nums))
+//         if (leftSum(i, nums) === rightSum(i, nums)) {
+//             return i
+//         }
+//     }
+//     return -1
+
+
+// };
+// console.log(pivotIndex(test))
