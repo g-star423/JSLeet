@@ -164,19 +164,43 @@
 
 // console.log(flippingMatrix(test1))
 
-let test1 = [1, 2, 3, 4, 5, 10, 11, 15, 34]
+// let test1 = [1, 2, 3, 4, 5, 10, 11, 15, 34]
 
-function processData(input) {
-    //Enter your code here
-    let ascendingArr = input.sort(function (a, b) { return a - b }) // first make array ascending
-    let result = []
-    for (let i = 0; i < input.length; i += 2) {
-        result.push(ascendingArr[i])
-    }
-    for (let i = input.length - 2; i >= 1; i -= 2) {
-        result.push(ascendingArr[i])
-    }
-    console.log(result)
-}
+// function processData(input) {
+//     //Enter your code here
+//     let ascendingArr = input.sort(function (a, b) { return a - b }) // first make array ascending
+//     let result = []
+//     for (let i = 0; i < input.length; i += 2) {
+//         result.push(ascendingArr[i])
+//     }
+//     for (let i = input.length - 2; i >= 1; i -= 2) {
+//         result.push(ascendingArr[i])
+//     }
+//     console.log(result)
+// }
 
-processData(test1)
+// processData(test1)
+
+// testString = '9999999'
+// iterations = 1000000000
+
+// function superDigit(n, k) { // currently doesn't work for really big numbers (millions of digits...)
+//     // Write your code here
+//     let arrayNumber = []
+//     let stringNumber = ''
+//     let result = 0;
+//     for (let i = 1; i <= k; i++) {
+//         arrayNumber.push(n)
+//     }
+//     stringNumber = arrayNumber.join('')
+//     for (let i = 0; i < stringNumber.length; i++) {
+//         result += parseInt(stringNumber[i])
+//     }
+//     if (result > 9) {
+//         return superDigit(result.toString(), 1)
+//     } else {
+//         return result
+//     }
+// }
+// console.log(superDigit(testString, iterations))
+
