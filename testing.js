@@ -237,3 +237,59 @@
 
 // };
 // console.log(pivotIndex(test))
+
+// var isIsomorphic = function (s, t) {
+//     const sMap = {}
+//     const tMap = {}
+//     for (let i = 0; i < s.length; i++) {
+//         if (sMap[s[i]]) {
+//             sMap[s[i]] = sMap[s[i]] + 1
+//         } else {
+//             sMap[s[i]] = 1
+//         }
+//     }
+//     for (let i = 0; i < t.length; i++) {
+//         if (tMap[t[i]]) {
+//             tMap[t[i]] = tMap[t[i]] + 1
+//         } else {
+//             tMap[t[i]] = 1
+//         }
+//     }
+//     console.log(sMap)
+//     console.log(tMap)
+//     let sArray = []
+//     let tArray = []
+//     for (const character in sMap) {
+//         sArray.push(sMap[character])
+//     }
+//     for (const character in tMap) {
+//         tArray.push(tMap[character])
+//     }
+//     // console.log(sArray)
+//     // console.log(tArray)
+//     if (JSON.stringify(sArray) === JSON.stringify(tArray)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// };
+
+// console.log(isIsomorphic('bbbaaaba', 'aaabbbba'))
+
+function twoSum(nums, target) {
+    let result = []
+    for (let i = 0; i < nums.length && result.length < 2; i++) {
+        for (let z = 0; z < nums.length && result.length < 2; z++) {
+            if (nums[z] + nums[i] === target && z != i) {
+                result.push(i)
+                result.push(z)
+            }
+        }
+    }
+    return result
+}
+
+let nums = [3, 2, 4]
+let target = 6
+// output should be [0, 1]
+console.log(twoSum(nums, target))
