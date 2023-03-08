@@ -276,20 +276,64 @@
 
 // console.log(isIsomorphic('bbbaaaba', 'aaabbbba'))
 
+// function twoSum(nums, target) {
+//     let result = []
+//     for (let i = 0; i < nums.length && result.length < 2; i++) {
+//         for (let z = 0; z < nums.length && result.length < 2; z++) {
+//             if (nums[z] + nums[i] === target && z != i) {
+//                 result.push(i)
+//                 result.push(z)
+//             }
+//         }
+//     }
+//     return result
+// }
+
+// let nums = [3, 2, 4]
+// let target = 6
+// // output should be [0, 1]
+// console.log(twoSum(nums, target))
+
+// var containsDuplicate = function (nums) {
+//     nums.map((x, i) => nums.map((y, j) => {
+//         if (x === y && i !== j) {
+//             return true
+//         }
+//     }))
+//     return false
+// };
+
+// function runningSum(nums) {
+//     let result = []
+//     let sum = 0
+//     for (let i = 0; i < nums.length; i++) {
+//         sum += nums[i]
+//         result.push(sum)
+//     }
+//     return result
+// }
+
+// console.log(runningSum([1, 2, 3, 4, 1]))
+
+// solving twosum using 0(N) complexity
+
+let nums = [3, 3]
+let target = 6
+
 function twoSum(nums, target) {
-    let result = []
-    for (let i = 0; i < nums.length && result.length < 2; i++) {
-        for (let z = 0; z < nums.length && result.length < 2; z++) {
-            if (nums[z] + nums[i] === target && z != i) {
-                result.push(i)
-                result.push(z)
-            }
+    // put all numbers from array into an object, where the number is the key, and the index is the value
+    // as we put these into the object, we will compare the new number to the sum
+
+    // target number - current number is an existing key in object
+    numsObject = {}
+    for (let i = 0; i < nums.length; i++) {
+        let difference = target - nums[i]
+        if (numsObject[difference] !== undefined) {
+            return [numsObject[difference], i]
         }
+        numsObject[nums[i]] = i
     }
-    return result
+    // return numsObject
 }
 
-let nums = [3, 2, 4]
-let target = 6
-// output should be [0, 1]
 console.log(twoSum(nums, target))
